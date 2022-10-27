@@ -1,9 +1,38 @@
 package nl.mirte.practice;
 
+import java.util.*;
+import java.util.stream.Collectors;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+
+        String inputText;
+        String word;
+        Integer frequency;
+        Integer highestFreq = null;
+        Integer freqForWord = null;
+
+        Map<String,Integer> m = new HashMap<>();
+        m.put("word1",1);
+
+        List<WordFrequency> wordFrequencyList = new ArrayList<>();
+
+
+
+        for (Map.Entry<String, Integer> newEntry: m.entrySet()) {
+            wordFrequencyList.add(new WordFrequencyClass(newEntry.getKey(), newEntry.getValue()));
+        }
+
+        for (WordFrequency wf: wordFrequencyList) {
+            System.out.println(wf);
+        }
+
+
+
+        WordFrequencyAnalyzerClass wfAnalyzer = new WordFrequencyAnalyzerClass(highestFreq, freqForWord){
+
+        };
 
     }
 

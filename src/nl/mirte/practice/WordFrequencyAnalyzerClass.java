@@ -1,21 +1,45 @@
 package nl.mirte.practice;
 
+import java.util.List;
+
 public class WordFrequencyAnalyzerClass implements WordFrequencyAnalyzer {
+
+    public Integer highestFreq;
+    public Integer freqForWord;
+    WordFrequencyClass wfArray;
+
+    public WordFrequencyAnalyzerClass(Integer highestFreq, Integer freqForWord, WordFrequencyClass wfArray) {
+        this.highestFreq = highestFreq;
+        this.freqForWord = freqForWord;
+        this.wfArray = wfArray;
+    }
+
+    public WordFrequencyAnalyzerClass(Integer highestFreq, Integer freqForWord) {
+        this.highestFreq = highestFreq;
+        this.freqForWord = freqForWord;
+    }
 
     @Override
     public int calculateHighestFrequency(String text) {
-        return 0;
+        return highestFreq;
     }
     // CalculateHighestFrequency should return the highest frequency in the text (several words might actually have this frequency)
 
     @Override
     public int calculateFrequencyForWord(String text, String word) {
-        return 0;
+        return freqForWord;
     }
+    // CalculateFrequencyForWord should return the frequency of the specified word
+
 
     @Override
-    public WordFrequency[] calculateMostFrequentNWords(String text, int n) {
-        return new WordFrequency[0];
+    public List<WordFrequency> calculateMostFrequentNWords(String text, int n) {
+        return null;
     }
+
+
+
+
+    // CalculateMostFrequentNWords should return a list of the most frequent „n" words in the input text, all the words returned in lower case. If..
 
 }
