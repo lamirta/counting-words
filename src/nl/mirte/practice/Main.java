@@ -7,35 +7,50 @@ public class Main {
 
     public static void main(String[] args) {
 
-        String inputText;
-        String word;
-        Integer frequency;
-        Integer highestFreq = null;
-        Integer freqForWord = null;
+        System.out.println("Enter the input text:");
 
-        Map<String,Integer> m = new HashMap<>();
-        m.put("word1",1);
+        Scanner scan = new Scanner(System.in);
 
-        List<WordFrequency> wordFrequencyList = new ArrayList<>();
+        String s = scan.nextLine();
+
+        scan.useDelimiter("[^A-Za-z]+");
 
 
+        s.charAt(i)=' ' && s.charAt(i+1);
 
-        for (Map.Entry<String, Integer> newEntry: m.entrySet()) {
-            wordFrequencyList.add(new WordFrequencyClass(newEntry.getKey(), newEntry.getValue()));
-        }
-
-        for (WordFrequency wf: wordFrequencyList) {
-            System.out.println(wf);
-        }
+        int frequency = 1;
 
 
 
-        WordFrequencyAnalyzerClass wfAnalyzer = new WordFrequencyAnalyzerClass(highestFreq, freqForWord){
 
-        };
 
     }
 
+
+
+
+
+
+//        String inputText = "test Test test the test the program";
+//        String word;
+//        Integer frequency;
+//        Integer highestFreq = null;
+//        Integer freqForWord = null;
+//
+//        Map<String,Integer> m = new HashMap<>();
+//        m.put("word1",1);
+//
+//        List<WordFrequency> wordFrequencyList = new ArrayList<>();
+//
+//
+//
+//        for (Map.Entry<String, Integer> newEntry: m.entrySet()) {
+//            wordFrequencyList.add(new WordFrequencyClass(newEntry.getKey(), newEntry.getValue()));
+//        }
+//
+//        for (WordFrequency wf: wordFrequencyList) {
+//            System.out.println(wf);
+//        }
 
 
 }
