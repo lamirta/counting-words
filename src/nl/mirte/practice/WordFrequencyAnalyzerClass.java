@@ -4,8 +4,8 @@ import java.util.List;
 
 public class WordFrequencyAnalyzerClass implements WordFrequencyAnalyzer {
 
-    public Integer highestFreq;
-    public Integer freqForWord;
+    final Integer highestFreq;
+    final Integer freqForWord;
     WordFrequencyClass wfArray;
 
     public WordFrequencyAnalyzerClass(Integer highestFreq, Integer freqForWord, WordFrequencyClass wfArray) {
@@ -36,10 +36,6 @@ public class WordFrequencyAnalyzerClass implements WordFrequencyAnalyzer {
     public List<WordFrequency> calculateMostFrequentNWords(String text, int n) {
         return null;
     }
-
-
-
-
     // CalculateMostFrequentNWords should return a list of the most frequent „n" words in the input text, all the words returned in lower case. If..
 
 }

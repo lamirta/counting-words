@@ -3,12 +3,12 @@ package nl.mirte.practice;
 import java.util.Comparator;
 import java.util.Map;
 
-public class CompareByFrequency implements Comparator<Map.Entry<String, MutableInteger>> {
+public class CompareByFrequency implements Comparator<Map.Entry<String, Integer>> {
 
-    public int compare(Map.Entry<String, MutableInteger> obj1
-            , Map.Entry<String, MutableInteger> obj2) {
-        int c1 = obj1.getValue().intValue();
-        int c2 = obj2.getValue().intValue();
+    public int compare(Map.Entry<String, Integer> object1
+            , Map.Entry<String, Integer> object2) {
+        int c1 = object1.getValue().intValue();
+        int c2 = object2.getValue().intValue();
         if (c1 < c2) {
             return -1;
 
@@ -19,5 +19,10 @@ public class CompareByFrequency implements Comparator<Map.Entry<String, MutableI
             return obj1.getKey().compareTo(obj2.getKey());
         }
     }
+
+
+    private Comparator<Map.Entry<String, Integer>> wfListSorted = new CompareByFrequency();
+
+
 
 }
